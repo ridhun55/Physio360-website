@@ -1,0 +1,30 @@
+
+{% load static %}
+
+<div id="Appointment" class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="full">
+            <div class="contact_us_section">
+              <div class="call_icon"> <img src="{% static 'images/it_service/phone_icon.png' %}" alt="#" /> </div>
+              <div class="inner_cont">
+                <h2>Make Appointment</h2>
+                <p>Make an Appointment by simply send your mobile number</p>
+                <form method="post"> {% csrf_token %}
+                  <div class="input-group">
+                    <input type="text" name="mobile" class="form-control" placeholder="Your Mobile Number">
+                    <div class="input-group-btn">
+                      <button class="butn_1" type="submit">Send</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="button_Section_cont"> <a class="btn dark_gray_bt" href="{% url 'contact' %}">Contact us</a> </div>
+              <div class="button_Section_cont hide"> <a class="btn dark_gray_bt" href="{% url 'make_appointment' %}">Make Appointment</a> </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

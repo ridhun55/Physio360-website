@@ -1,0 +1,66 @@
+{% extends 'admin_base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="content-wrapper">
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0 text-dark">Messages</h1>
+          </div>
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#"> </a></li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <style>
+    .timeline > div > .timeline-item > .time {
+    color: #333232;
+    float: right;
+    font-size: 14px;
+    padding: 10px;
+    margin-right: 10px;
+}
+  </style>
+
+
+    <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-10">
+{% for i in data %}
+            <div class="timeline">
+              <div class="time-label">
+                <span class="bg-fuchsia">{{ i.MessangerDate }}</span>
+              </div>
+              <div>
+                <i class="fas fa-envelope bg-blue"></i>
+                <div class="timeline-item">
+                  <span class="time"><i class="fas fa-phone"></i> {% if i.MessangerMobile is None %}{% else %}{{ i.MessangerMobile }}{% endif %}</span>
+                  <h3 class="timeline-header"><a href="#">{% if i.MessangerName is None %}{% else %}{{ i.MessangerName }}{% endif %}</a></h3>
+                  <div class="timeline-body">
+                    {% if i.MessangerMessage is None %}{% else %}{{ i.MessangerMessage }}{% endif %}
+                  </div>
+                  <div class="timeline-footer">
+                    <a href="{% url 'delete_message' i.id %}" class="btn btn-danger btn-sm">Delete Message</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+  {% endfor %}
+          </div>
+        </div>
+      </div>
+      <!-- /.timeline -->
+
+    </section>
+
+  </div>
+
+{% endblock content %}

@@ -1,0 +1,61 @@
+{% extends 'admin_base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="content-wrapper">
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+        </div>
+      </div>
+    </div>
+    <section class="content-wrapper">
+      <div class="container">
+      <div class="col-md-7 ">
+        <div class="card card-primary">
+          <div class="card-header">
+            <h3 class="card-title">Edit Patient Details</h3>
+          </div>
+          <form method="post">{% csrf_token %}
+            <div class="card-body">
+              <div class="form-group">
+                <label>Name</label>
+                <input name="name" type="text" class="form-control" value="{% if data.name is None %}{% else %}{{ data.name }}{% endif %}">
+              </div>
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-4">
+                    <label>Age</label>
+                    <input name="age" type="text" class="form-control" value="{% if data.age is None %}{% else %}{{ data.age }}{% endif %}">
+                  </div>
+                  <div class="col-8">
+                    <label>Place</label>
+                    <input name="place" type="text" class="form-control" value="{% if data.place is None %}{% else %}{{ data.place }}{% endif %}">
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-6">
+                    <label>Mobile</label>
+                    <input name="mobile" type="text" class="form-control" value="{{ data.mobile }}">
+                  </div>
+                  <div class="col-6">
+                    <label>Date</label>
+                    <input name="date" type="date" class="form-control" value="{% if data.date is None %}{% else %}{{ data.date | date:'Y-m-d' }}{% endif %}">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer">
+              <button type="reset" class="btn btn-secondary">Cancel</button>&nbsp;&nbsp;
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div></div>
+    </section>
+  </div>
+
+{% endblock content %}

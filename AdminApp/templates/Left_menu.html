@@ -1,0 +1,57 @@
+{% load static %}
+  <aside id="Dashboard" class="main-sidebar sidebar-dark-primary elevation-4">
+    <div class="sidebar">
+      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        <div class="image">
+          <img src="{% static 'images/loaders/loader_1.png' %}" class="img-circle elevation-2" alt="Physio360">
+        </div>
+        <div class="info">
+          <a href="{% url 'home' %}" class="d-block">Physio360</a>
+        </div>
+      </div>
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <li class="nav-item has-treeview menu-open">
+            <a href="{% url 'dashboard' %}" class="nav-link active">
+              <i class="nav-icon fas fa-user-md"></i><p> DASHBOARD</p>
+            </a>
+          </li>
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-edit"></i>
+              <p>Appointments
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{% url 'admin_appointment_list' %}" class="nav-link">
+                  <i class="nav-icon far fa-circle text-warning"></i>
+                  <p>Admin Appointment</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{% url 'appointment_list' %}" class="nav-link">
+                  <i class="nav-icon far fa-circle text-success"></i>
+                  <p>Other Appointment Request</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon far fa-circle text-info"></i>
+                  <p>------</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="{% url 'messages' %}" class="nav-link">
+              <i class="nav-icon far fa-envelope"></i>
+              <p>Messages<span class="right badge badge-danger">{{ msg_count }}</span>
+              </p>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </aside>

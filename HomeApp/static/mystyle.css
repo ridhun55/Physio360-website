@@ -1,0 +1,201 @@
+.topbar-left ul li a{
+    font-family: Poppins;
+}
+
+.WhyChooseUs_1 h3{
+    text-align: center;
+}
+.WhyChooseUs_1{
+    margin-top: 35px;
+    padding-left: 20px;
+    padding-right: 20px;
+    
+}
+
+.WhyChooseUs_1 h3::after{
+    content: "";
+    display: block;
+    margin: 7px auto 0;
+    width: 82px;
+    height: 5px;
+    background: #17a5e9;
+    margin-bottom: 0px;
+}
+
+.WhyChooseUs_1 p{
+    font-size: 16px;
+    line-height: 23px;
+    font-weight: 400;
+    text-align: justify;
+}
+
+.butn_1{
+  background-color:black; /* Green */
+  border: none;
+  color: white;
+  padding: 6px 15px;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+.butn_1:hover{
+  background: white;
+  color: black;
+}
+.input-group {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-bottom: 0;
+    margin-top: 10px;
+}
+.mb-2, .my-2 {
+    margin-bottom: .5rem !important;
+}
+
+
+.footer_blog p{
+    font-family: poppins;
+}
+
+
+.blog_colum{
+    border-bottom: #17a5e9 solid 5px;
+    border-top: #17a5e9 solid 1px;
+
+}
+
+.blog_feature_img{
+    background-color:#17a5e9;
+}
+
+.treat_1{
+    margin-bottom: 15px;
+}
+
+
+.topbar-hightlight{
+    font-family: poppins;
+}
+
+.info_cont p:hover{
+    color: black;
+}
+
+
+#Appointment .btn {
+    border-radius: 5px;
+    margin-bottom: 7px;
+  }
+
+
+  .appointment_form input.field_custom {
+      border: solid black 2px;
+      width: 100%;
+      background: white;
+      min-height: 48px;
+      padding: 5px 19px;
+      line-height: normal;
+      border-radius: 5px;
+      margin-bottom: 11px;
+      font-size: 16px;
+      color: #000;
+  }
+
+
+
+  ::placeholder {
+    color:black ;
+    opacity: 1;
+  }
+
+
+  .appointment_form .btn {
+      min-width: 141px;
+      height: 48px;
+      border-radius: 6px;
+      padding: 0;
+      text-align: center;
+      line-height: 50px;
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      margin-top: 10px;
+      color: #fff;
+      border: solid transform 1px;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, .5);
+      position: relative;
+      font-family: 'Poppins', sans-serif;
+  }
+  .appointment_form .btn.main_bt {
+      background: #000;
+      border: none;
+  }
+
+
+  .contant_form .message_1 input{
+      border: solid black 2px;
+      width: 100%;
+      background: white;
+      min-height: 48px;
+      padding: 5px 19px;
+      line-height: normal;
+      border-radius: 5px;
+      margin-bottom: 11px;
+      font-size: 16px;
+      color: #000;
+  }
+  .contant_form .message_1 textarea{
+    border: solid black 2px;
+    background: white;
+    padding: 5px 19px;
+    line-height: normal;
+    border-radius: 5px;
+    margin-bottom: 11px;
+    font-size: 16px;
+    color: #000;
+  }
+
+
+  .message_1 .btn {
+      border-radius: 6px;
+  }
+
+  #AboutUs .about_cont_blog p{
+    text-align: left;
+    padding-bottom: 10px;
+  }
+  #AboutUs .text_align_center img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    padding-bottom: 19px;
+    justify-content: center;
+    vertical-align: middle;
+    padding: 20px;
+}
+
+
+  /*   =================== Mobile =====================  */
+
+
+  @media only screen and (max-width: 767px) {
+    #Appointment .hide{
+        display: none;
+    }
+  }

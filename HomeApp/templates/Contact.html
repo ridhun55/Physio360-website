@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div id="inner_banner" class="section inner_banner_section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="full">
+          <div class="title-holder">
+            <div class="title-holder-cell text-left">
+              <h1 class="page-title">Contact Us</h1>
+              <ol class="breadcrumb">
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% include "Appointment.html" %}
+
+<div id="Contact_Details" class="section padding_layout_1">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-2 col-lg-2 col-md-12 col-sm-12 col-xs-12"></div>
+      <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-xs-12">
+        <div class="row">
+          <div class="full">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+              <div class="main_heading text_align_center">
+                <h2>Contact Details</h2>
+              </div>
+            </div>
+            <div class="contact_information">
+              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 adress_cont">
+                <div class="information_bottom text_align_center">
+                  <div class="icon_bottom"> <i class="fa fa-road" aria-hidden="true"></i> </div>
+                  <div class="info_cont">
+                    <h4>Physio 360</h4>
+                    <p>Ground floor, G-home building<br>
+                       Maniyamkavu, puthenchira<br>
+                       Thrissur-680682</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 adress_cont">
+                <div class="information_bottom text_align_center">
+                  <div class="icon_bottom"> <i class="fa fa-user" aria-hidden="true"></i> </div>
+                  <div class="info_cont">
+                    <h4><a href="tel:+918589872808"> +91 8589 8728 08 </a></h4>
+                    <h4><a href="tel:+919633297828"> +91 9633 2978 28 </a></h4>
+                    <p>Mon-Fri 8:30am-6:30pm</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 adress_cont">
+                <div class="information_bottom text_align_center">
+                  <div class="icon_bottom"> <i class="fa fa-envelope" aria-hidden="true"></i> </div>
+                  <div class="info_cont">
+                    <h4><a href="mailto:physio360in2020@gmail.com">physio360in2020@gmail.com</a></h4>
+                    <p>24/7 online support</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contant_form ">
+              <h2 class="text_align_center">SEND MESSAGER</h2>
+              <div class="form_section">
+                <form method="post" class="form_contant message_1"> {% csrf_token %}
+                  <fieldset>
+                  <div class="row">
+                    <div class="field col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                      <input name="MessangerName" class="field_custom" placeholder="Your Name *" type="text">
+                    </div>
+                    <div class="field col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                      <input name="MessangerMobile" class="field_custom" placeholder="Mobile Number " type="text">
+                    </div>
+                    <div class="field col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                      <textarea name="MessangerMessage" class="field_custom" placeholder="Message..."></textarea>
+                    </div>
+                    <div class="center">
+                      <button type="submit" class="btn main_bt">SUBMIT NOW</button>
+                    </div>
+                  </div>
+                  </fieldset>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock content %}

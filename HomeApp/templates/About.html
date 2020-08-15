@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div id="inner_banner" class="section inner_banner_section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="full">
+          <div class="title-holder">
+            <div class="title-holder-cell text-left">
+              <h1 class="page-title">About Us</h1>
+              <ol class="breadcrumb">
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% include "Appointment.html" %}
+
+<div id="AboutUs" class="section padding_layout_1">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="full">
+          <div class="main_heading text_align_center">
+            <h2>Best Physiotherapy Center</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row about_blog">
+      <div class="col-lg-6 col-md-6 col-sm-12 about_feature_img padding_right_0" style="background-color: white;">
+        <div class="full text_align_center">
+          <img class="img-responsive" src="{% static 'images/logos/physio_logo.png' %}" alt="#" /> </div>
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-12 about_cont_blog">
+        <div class="full text_align_left">
+          <h3>About</h3>
+          <p>Physiotherapy or Physical therapy degree in India is offered as a regular course, by the Universities and Colleges affiliated to the State Universities. The graduation course in Physiotherapy is called BPT(Bachelor of Physiotherapy) and post graduation course is called MPT(Masters of Physiotherapy). There are many other Institutions that offers Diploma and certificate courses in Physiotherapy.</p>
+          <p>After qualifying graduate degree in physiotherapy, physiotherapists need to be registered in any Association to Practice. The physiotherapists who are well dedicated and want their professional assurance, IAP is an individual organization of membership professional representing more than 25000 member as physical therapists, physical therapist assistants, and students. IAP is an individual organization of membership of this profession</p>
+          <ul>
+            <li><i class="fa fa-check-circle"></i>Persius appetere pro mea harum ridens</li>
+            <li><i class="fa fa-check-circle"></i>Instructior vis at causae legimus luptatum mel</li>
+            <li><i class="fa fa-check-circle"></i>Maluisset id persius appetere pro mea harum</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock content %}

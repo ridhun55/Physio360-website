@@ -1,0 +1,73 @@
+{% extends 'admin_base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="content-wrapper">
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0 text-dark">Other Appointment Request</h1>
+          </div>
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#"> </a></li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card">
+              <div class="card-header bg-info">
+                <h3 class="card-title">Other Appointment Request</h3>
+              </div>
+
+              <div class="card-body">
+                <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th class="no">No.</th>
+                      <th class="name">Patient Name</th>
+                      <th class="age">Age</th>
+                      <th class="mobile">Mobile No</th>
+                      <th class="place">Place</th>
+                      <th class="date">Date</th>
+                      <th class="edit">Edit</th>
+                      <th class="delete">Delete</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  {% for i in data %}
+                    <tr>
+                      <td class="no">{{ i.id }}</td>
+                      <td class="name">{% if i.name is None %}{% else %}{{ i.name }}{% endif %}</td>
+                      <td class="age">{% if i.age is None %}{% else %}{{ i.age }}{% endif %}</td>
+                      <td class="mobile">{{ i.mobile }}</td>
+                      <td class="place">{% if i.place is None %}{% else %}{{ i.place }}{% endif %} </td>
+                      <td class="date">{{ i.date }}</td>
+                      <td class="edit"><a href="{% url 'edit_appointment_list' i.id %}" style="color: blue;">Edit</a></td>
+                      <td class="delete"><a href="{% url 'delete_appointment_list' i.id %}" style="color: red;">Delete</a></td>
+                    </tr>
+                  {% endfor %}
+                  </tbody>
+                </table>
+              </div>
+              <div class="card-footer clearfix">
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+{% endblock content %}
